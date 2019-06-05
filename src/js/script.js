@@ -34,6 +34,8 @@ function gdprCookieNotice(config) {
   } else {
     deleteCookies(currentCookieSelection);
     document.dispatchEvent(cookiesAcceptedEvent);
+    showNotice();
+    showReminder();
   }
 
   // Get gdpr cookie notice stored value
@@ -63,7 +65,20 @@ function gdprCookieNotice(config) {
 
   // Hide cookie notice bar
   function hideNotice() {
-    document.documentElement.classList.remove(pluginPrefix + "-loaded");
+    //document.documentElement.classList.remove(pluginPrefix + "-loaded");
+    showReminder();
+  }
+
+  function showReminder() {
+    setTimeout(function () {
+      document.documentElement.classList.add(pluginPrefix + "-reminder");
+    }, config.timeout);
+    var item = document.querySelector(
+      "." + pluginPrefix + "-nav-item-settings"
+    );
+    if (item) {
+      item.innerHTML = '🍪';
+    }
   }
 
   // Write gdpr cookie notice's cookies when user accepts cookies

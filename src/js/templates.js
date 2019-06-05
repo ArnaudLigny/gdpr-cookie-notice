@@ -34,4 +34,9 @@ window["gdpr-cookie-notice-templates"]["modal.html"] = "<div class=\"gdpr-cookie
     "  </div>\n" +
     "</div>\n" +
     ""; 
+
+window["gdpr-cookie-notice-templates"]["reminder.html"] = "<div class=\"gdpr-cookie-notice\">\n" +
+    "  <a href=\"#\" class=\"gdpr-cookie-notice-nav-item gdpr-cookie-notice-nav-item-settings\">{settings}</a>\n" +
+    "</div>\n" +
+    ""; 
 // END 
