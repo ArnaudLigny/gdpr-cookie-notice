@@ -5,7 +5,7 @@ gdprCookieNoticeLocales.fr = {
   settings: "Paramètres des cookies",
   accept: "Accepter",
   statement: "Conditions d'utilisations",
-  save: "Enregitsrer",
+  save: "Enregistrer",
   always_on: "Toujours actif",
   cookie_essential_title: "Cookies indispensables au site web",
   cookie_essential_desc:
