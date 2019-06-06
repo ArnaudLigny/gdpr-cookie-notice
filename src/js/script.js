@@ -23,6 +23,12 @@ function gdprCookieNotice(config) {
     detail: currentCookieSelection
   });
 
+  // Do Not Track
+  if (navigator.doNotTrack == '1') {
+    console.log('DNT: ' + navigator.doNotTrack);
+    return;
+  }
+
   // Show cookie bar if needed
   if (!currentCookieSelection) {
     showNotice();
